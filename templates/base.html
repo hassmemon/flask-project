@@ -1,11 +1,11 @@
 <html>
 <head>
-    <title>Quote Bank</title>
+    <title>Zastav Travel Cards</title>
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <header>
-        <h1>Quote Bank</h1>
+        <h1>Zastav Travel Cards</h1>
         <nav>
             <div>
                 <a href="/">Home</a>
@@ -15,7 +15,7 @@
             </div> -->
             {% if session.get('user_id') %}
                 <div>
-                    Welcome, {{session.get('user_name')}}
+                    Welcome, traveller {{session.get('user_name')}}
                 </div>
                 <div>
                     <a href="/sessions/destroy">Logout</a>
@@ -35,8 +35,8 @@
     </main>
     <footer>
         <section>
-            <h4>Quote Bank</h4>
-            <p>&copy; 2022 Quote Bank, Inc.
+            <h4>Zastav Adventures</h4>
+            <p>&copy; 2022 Zastav Inc.
         </section>
     </footer>
 </body>

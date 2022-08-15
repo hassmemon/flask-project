@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post" action="/blog">
+    <h2>Add your post</h2>
+    <div>
+        <label for="blog_post">Blog Post</label>
+        <textarea id="blog_post" name="blog_post"></textarea> 
+    </div>
+    
+    <div>
+        <label for="blog_title">Title</label>
+        <input id="blog_title" name="blog_title" type="text" />
+    </div>
+
+    <div>
+        <label for="destination">Destination</label>
+        <select id="destination" name="destination">
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Tajikistan">Tajikistan</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="tags">Tags</label>
+        <input id="tags" name="tags" type="text" />
+    </div>
+
+    <div>
+        <button type="submit">Save</button>
+    </div>
+</form>
+{% endblock content %}

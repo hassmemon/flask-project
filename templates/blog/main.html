@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<a href="/blog/create">Create</a>
+<a href="/blog/show">Show All Cards</a>
+
+<h2>My Stash</h2>
+
+<!-- {% print(my_quote) %} -->
+{% for my_post in my_blogposts %}
+<div class = "{{my_post['destination']}}">
+    <!-- style="background-color:bisque; padding: 20px; margin-bottom: 5px;" -->
+    <h3>{{my_post['blog_title']}}</h3>
+    <quote>"{{my_post['blog_post']}}"</quote>
+    <div>
+        <a href="/blog/{{ my_post['id'] }}/edit">Edit</a>&nbsp;-&nbsp;<a href="/blog/{{ my_post['id'] }}/delete">Delete</a>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock content %}
+

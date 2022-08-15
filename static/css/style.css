@@ -1,6 +1,8 @@
 html,
 body {
     font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: darkgrey;
 }
 
 * {
@@ -79,8 +81,29 @@ footer {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.quotestyle {
+.blogstyle {
     background-color:rgb(255, 220, 200); 
     padding: 20px; 
     margin-bottom: 5px;
 }
+
+.Kyrgyzstan {
+    background-image: url("../images/kyrgystan.png");
+    padding: 20px;
+    margin-bottom: 5px;
+    background-color: red;
+}
+
+.Kazakhstan {
+    background-image: url("../images/astana.jpeg");
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+.Tajikistan {
+    background-image: url("../images/tajikistan.jpeg");
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+

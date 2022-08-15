@@ -1,14 +1,14 @@
 import psycopg2
 from psycopg2.extras import DictCursor
 import os
-DB_URL = os.environ.get("DATABASE_URL", "dbname=project2")
+DB_URL = os.environ.get("DATABASE_URL", "dbname=travel_blog")
 
 def sql_select(query, params):
     conn = psycopg2.connect(DB_URL)
     cur = conn.cursor(cursor_factory=DictCursor)
     cur.execute(query, params)
     results = cur.fetchall()
-    cur.close()
+    cur.close() 
     conn.close()
     return results
 
