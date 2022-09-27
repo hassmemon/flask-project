@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>All Quotes</h2>
+<h2>Community Stash</h2>
 
 {% for each_post in all_blogposts %}
 
@@ -21,7 +21,7 @@
     </div>
 
     <div>
-        <button id ="add_post" type="submit">Stash</button>
+        <button id ="add_post" type="submit" class="button">Stash</button>
     </div>
 </form>
 {% endif %}

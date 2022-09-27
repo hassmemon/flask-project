@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div className="signup-login">
-    
+<div className="signup-login" class="welcomeforms">
     <form action="/sessions/create" method="POST">
         {% if error %}
             <div class="error">
@@ -16,11 +15,14 @@
         </div>
         <div>
             <label for="password">Password</label>
-            <input id="password" name="password" type="text" />
+            <input id="password" name="password" type="password" />
         </div>
         <div>
-            <button type="submit">Login</button>
+            <button type="submit" class="button">Login</button>
         </div>
+    </form>
+    <form action="/signup">
+        <button type="submit" class="button">Sign up</button>
     </form>
 </div>
 

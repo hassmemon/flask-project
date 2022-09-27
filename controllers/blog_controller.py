@@ -61,7 +61,6 @@ def edit(id):
     if not session.get("user_id"):
         return redirect("/login")
     blog_post = get_blogpost(id)
-    # user_id = get_user_id(session.get('user_id'))
     return render_template(
         "edit.html", blog_post=blog_post, user_id = session.get('user_id')
 

@@ -8,19 +8,23 @@
         <h1>Zastav Travel Cards</h1>
         <h2>Crowdsourced travel tips for intrepid explorers</h2>
         <nav>
-            <div>
-                <a href="/">Home</a>
-            </div>
-            <!-- <div>
-                <a href="/foods">Menu</a>
-            </div> -->
             {% if session.get('user_id') %}
-                <div>
+                <div id="welcome">
                     Welcome, traveller {{session.get('user_name')}}
                 </div>
-                <div>
+                    <div>
+                        <a href="/blog/create">Contribute a tip</a>
+                    </div>
+                    <div>
+                        <a href="/blog/show">Show Community Stash</a>
+                    </div>
+                    <div>
+                        <a href="/">Show My Stash</a>
+                    </div>
+                    <div>
                     <a href="/sessions/destroy">Logout</a>
-                </div>
+                    </div>
+                    </nav>
             {% else %}
                 <div>
                     <a href="/login">Login</a>
@@ -30,6 +34,7 @@
                 </div>
             {% endif %}       
         </nav>
+        
     </header>
     <main>
         {%block content %}{% endblock content %}
