@@ -45,7 +45,8 @@ def insert():
         return redirect("/login")
     user_id = session.get("user_id")
     insert_blogpost(
-        request.form.get("blog_post"), request.form.get("blog_title"), user_id, request.form.get("topics")
+        request.form.get("blog_post"), request.form.get(
+            "blog_title"), user_id, request.form.get("topics")
     )
     return redirect("/")
 
@@ -62,9 +63,9 @@ def edit(id):
         return redirect("/login")
     blog_post = get_blogpost(id)
     return render_template(
-        "edit.html", blog_post=blog_post, user_id = session.get('user_id')
+        "edit.html", blog_post=blog_post, user_id=session.get('user_id')
 
-        
+
     )
 
 
@@ -72,10 +73,11 @@ def edit(id):
 def update(id):
     if not session.get("user_id"):
         return redirect("/login")
-    blog_post = request.form.get("blog_post")
     blog_title = request.form.get("blog_title")
+    blog_post = request.form.get("blog_post")
+
     user_id = session.get("user_id")
-    destination = request.form.get("destination")
+    destination = request.form.get("topics")
     print(id)
     update_blogpost(id, blog_title, blog_post, destination)
     return redirect("/")

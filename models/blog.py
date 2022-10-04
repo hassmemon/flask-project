@@ -14,10 +14,9 @@ def insert_blogpost(blog_title, blog_post, user_id, topics):
     )
 
 
-
-
 def get_blogpost(id):
-    results = database.sql_select("SELECT * FROM blog_entries WHERE id = %s", [id])
+    results = database.sql_select(
+        "SELECT * FROM blog_entries WHERE id = %s", [id])
     result = results[0]
     return result
 
@@ -50,9 +49,10 @@ def get_user_blogposts(user_id):
 
 def update_blogpost(id, blog_title, blog_post, topics):
     database.sql_write(
-        "UPDATE blog_entries set blog_post = %s, blog_title = %s, topics = %s WHERE id = %s",
+        "UPDATE blog_entries set blog_title = %s, blog_post = %s, topics = %s WHERE id = %s",
         [blog_title, blog_post, topics, id],
     )
+
 
 def delete_blogpost(id):
     database.sql_write("DELETE FROM blog_entries WHERE id = %s", [id])
