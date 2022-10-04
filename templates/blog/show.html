@@ -5,7 +5,7 @@
 
 {% for each_post in all_blogposts %}
 
-<div class="{{each_post['destination']}}">
+<div class="{{each_post['topics']}}">
     <h3>{{each_post["blog_title"]}}</h3>
     <quote>"{{each_post['blog_post']}}"</quote>
     <h3>Posted by {{each_post["user_name"]}}</h3>

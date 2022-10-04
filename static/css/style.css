@@ -23,6 +23,14 @@ button {
     display: block;
 }
 
+.spacer 
+    {
+            border: 0;
+            margin-block: 0.5em;
+            display: block;
+            padding-left: 0.5em;
+        }
+
 #welcome {
     border: 0;
         margin-block: 0.5em;
@@ -35,6 +43,7 @@ button {
     cursor: pointer;
     background-color: grey;
     font-size: 1em;
+    
 }
 
 .welcomeforms {
@@ -56,8 +65,8 @@ textarea {
 }
 
 form {
-    margin: 0 auto;
-    width: 30em;
+    /* margin: 0 auto; */
+    /* width: 30em; */
 }
 
 form > div {
@@ -101,8 +110,8 @@ footer {
     margin-bottom: 5px;
 }
 
-.Food {
-    background-image: url("../images/kyrgystan.png");
+.Sights {
+    background-image: url("../images/kyrgyzstan.png");
     padding: 20px;
     margin-bottom: 5px;
     background-color: red;
@@ -111,7 +120,7 @@ footer {
 }
 
 .Lodgings {
-    background-image: url("../images/astana.jpeg");
+    background-image: url("../images/yurt.jpg");
     padding: 20px;
     margin-bottom: 5px;
     border: 5px solid black;
@@ -119,26 +128,17 @@ footer {
 }
 
 .Safety {
-    background-image: url("../images/tajikistan.jpeg");
+    background-image: url("../images/safety.jpg");
     padding: 20px;
     margin-bottom: 5px;
     border: 5px solid black;
     border-radius: 25px;
 }
 
-.Outdoors {
-    background-image: url("../images/tajikistan.jpeg");
+.Food {
+    background-image: url("../images/pakistan.jpeg");
     padding: 20px;
     margin-bottom: 5px;
     border: 5px solid black;
     border-radius: 25px;
 }
-
-.Culture {
-    background-image: url("../images/tajikistan.jpeg");
-    padding: 20px;
-    margin-bottom: 5px;
-    border: 5px solid black;
-    border-radius: 25px;
-}
-

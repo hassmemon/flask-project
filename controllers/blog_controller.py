@@ -45,7 +45,7 @@ def insert():
         return redirect("/login")
     user_id = session.get("user_id")
     insert_blogpost(
-        request.form.get("blog_post"), request.form.get("blog_title"), user_id, request.form.get("tags"), request.form.get("destination")
+        request.form.get("blog_post"), request.form.get("blog_title"), user_id, request.form.get("topics")
     )
     return redirect("/")
 
@@ -75,10 +75,9 @@ def update(id):
     blog_post = request.form.get("blog_post")
     blog_title = request.form.get("blog_title")
     user_id = session.get("user_id")
-    tags = request.form.get("tags")
     destination = request.form.get("destination")
     print(id)
-    update_blogpost(id, blog_title, blog_post, tags, destination)
+    update_blogpost(id, blog_title, blog_post, destination)
     return redirect("/")
 
 

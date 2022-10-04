@@ -1,11 +1,19 @@
 import database
 
 
-def insert_blogpost(blog_title, blog_post, user_id, tags, destination):
+# def insert_blogpost(blog_title, blog_post, user_id, tags, destination):
+#     database.sql_write(
+#         "INSERT into blog_entries (blog_title, blog_post, user_id, tags, destination) VALUES (%s, %s, %s, %s, %s);",
+#         [blog_post, blog_title, user_id, tags, destination],
+#     )
+
+def insert_blogpost(blog_title, blog_post, user_id, topics):
     database.sql_write(
-        "INSERT into blog_entries (blog_title, blog_post, user_id, tags, destination) VALUES (%s, %s, %s, %s, %s);",
-        [blog_post, blog_title, user_id, tags, destination],
+        "INSERT into blog_entries (blog_title, blog_post, user_id, topics) VALUES (%s, %s, %s, %s);",
+        [blog_post, blog_title, user_id, topics],
     )
+
+
 
 
 def get_blogpost(id):
@@ -34,10 +42,16 @@ def get_user_blogposts(user_id):
     return results
 
 
-def update_blogpost(id, blog_title, blog_post, tags, destination):
+# def update_blogpost(id, blog_title, blog_post, tags, destination):
+#     database.sql_write(
+#         "UPDATE blog_entries set blog_post = %s, blog_title = %s, tags = %s, destination = %s WHERE id = %s",
+#         [blog_title, blog_post, tags, destination, id],
+#     )
+
+def update_blogpost(id, blog_title, blog_post, topics):
     database.sql_write(
-        "UPDATE blog_entries set blog_post = %s, blog_title = %s, tags = %s, destination = %s WHERE id = %s",
-        [blog_title, blog_post, tags, destination, id],
+        "UPDATE blog_entries set blog_post = %s, blog_title = %s, topics = %s WHERE id = %s",
+        [blog_title, blog_post, topics, id],
     )
 
 def delete_blogpost(id):

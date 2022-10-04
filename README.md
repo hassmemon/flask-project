@@ -15,4 +15,13 @@
 
 ## Tech Used
 
+-   HTML/CSS and Javascript
+-   PostgreSQL
+
+*   Flask
+
+-   bcrypt
+
+*   psycopg2
+
 ## Features
