@@ -1,0 +1,143 @@
+html,
+body {
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: darkgrey;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main,
+header,
+footer {
+    width: 60em;
+    margin: 2em auto;
+}
+
+a,
+button {
+    border: 0;
+    margin-block: 0.5em;
+    display: block;
+}
+
+.spacer {
+    border: 0;
+    margin-block: 0.5em;
+    display: block;
+    padding-left: 0.5em;
+}
+
+#welcome {
+    border: 0;
+    margin-block: 0.5em;
+    display: block;
+    padding-left: 0.5em;
+}
+
+.button {
+    padding: 0.5em 1em;
+    cursor: pointer;
+    background-color: grey;
+    font-size: 1em;
+
+}
+
+.welcomeforms {
+    border: 0;
+    margin-block: 0.5em;
+    display: block;
+}
+
+#add_quotes {
+    padding: 0.5em 1em;
+    cursor: pointer;
+    background-color: rgb(186, 233, 158);
+    font-size: 1.4em;
+}
+
+input,
+textarea {
+    padding: 0.5em 1em;
+}
+
+form {
+    /* margin: 0 auto; */
+    /* width: 30em; */
+}
+
+form>div {
+    margin-block: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+form label,
+form input,
+form textarea {
+    width: 100%;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form .error {
+    background-color: rgb(250, 170, 164);
+    border: 5px solid rgb(187, 76, 75);
+    padding: 1em 2em;
+    color: rgb(38, 28, 28);
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+    background-color: rgba(128, 128, 128, 0.643);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.blogstyle {
+    background-color: rgb(255, 220, 200);
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+.Sights {
+    background-image: url("../images/kyrgyzstan.png");
+    padding: 20px;
+    margin-bottom: 5px;
+    background-color: red;
+    border: 5px solid black;
+    border-radius: 25px;
+}
+
+.Lodgings {
+    background-image: url("../images/yurt.jpg");
+    padding: 20px;
+    margin-bottom: 5px;
+    border: 5px solid black;
+    border-radius: 25px;
+}
+
+.Safety {
+    background-image: url("../images/safety.jpg");
+    padding: 20px;
+    margin-bottom: 5px;
+    border: 5px solid black;
+    border-radius: 25px;
+}
+
+.Food {
+    background-image: url("../images/pakistan.jpg");
+    padding: 20px;
+    margin-bottom: 5px;
+    border: 5px solid black;
+    border-radius: 25px;
+}
